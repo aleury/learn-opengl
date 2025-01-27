@@ -61,7 +61,7 @@ main :: proc() {
 	gl.ShaderSource(vertex_shader, 1, &vertex_shader_src, nil)
 	gl.CompileShader(vertex_shader)
 
-	success: c.int
+	success: i32
 	info_log: [512]u8
 	gl.GetShaderiv(vertex_shader, gl.COMPILE_STATUS, &success)
 	if !bool(success) {
