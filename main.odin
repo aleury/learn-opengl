@@ -98,7 +98,13 @@ main :: proc() {
 
 	// Set up vertex data (and buffer(s)) and configure vertex attributes.
 	// ------------------------------------------------------------------
-	vertices := [?]f32{-0.5, -0.5, 0.0, 0.5, -0.5, 0.0, 0.0, 0.5, 0.0}
+	// odinfmt: disable
+	vertices := [?]f32{
+        -0.5, -0.5, 0.0,
+         0.5, -0.5, 0.0,
+         0.0,  0.5, 0.0,
+    }
+	// odinfmt: enable
 
 	vao: u32
 	gl.GenVertexArrays(1, &vao)
